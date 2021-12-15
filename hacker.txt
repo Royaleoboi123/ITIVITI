@@ -1,0 +1,586 @@
+J1:Largest among 3
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+      Scanner sc= new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        if(a>b&&a>c)
+            System.out.println(a);
+        else{
+            if(b>a&&b>c)
+            System.out.println(b);
+        else    
+            System.out.println(c);
+        }
+        }
+}
+.........................................................................
+J2:Sum of all numbers divisible by 3
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    Scanner sc=new Scanner(System.in);
+            int n= sc.nextInt();
+                int sum=0;
+        for(int i=0;i<n*2;i=i+2){
+            if(i%3==0)
+                sum=sum+i;
+        }
+        System.out.println(sum);
+    }
+}
+.......................................................
+J3:Armstrong number
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+   Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int temp=n;
+        int r=0;
+        int sum=0;
+        while(temp != 0){
+           r= temp%10;
+           sum+=Math.pow(r,3);
+            temp=temp/10;
+        }
+        if(n==sum)
+            System.out.println("1");
+         else   
+             System.out.println("0");
+    }
+}
+...............................................................
+J4: Highest and Average Marks
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+   Scanner sc=new Scanner(System.in);
+       int n = sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        double sum=0.0;
+        int max=arr[0];
+            for (int i=0;i<arr.length;i++){
+             sum+=arr[i];
+                if(max<=arr[i])
+                    max=arr[i];
+            }
+        sum=sum/n;
+        System.out.println(max);
+        System.out.println(sum);
+
+    }
+}
+..................................................................................
+J5:Call Method
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    student obj=new student();
+      obj.print();
+    }
+}
+class student{
+    void print(){
+        System.out.println("Hi! I am class STUDENT.");
+    }
+    
+}
+..................................................................................
+J6:Call and Display method
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    
+        Student obj1=new Student();
+        School obj2=new School();
+        obj1.print();
+        obj2.print();
+    }
+}
+ class Student{
+    void print(){
+        System.out.println("Hi! I am class STUDENT.");
+     }
+              }
+ class School{
+    void print(){
+          System.out.println("Hi! I am class SCHOOL.");
+    }
+ }
+..................................................................................
+J7:Call and Create method
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    studentMethod();
+    }
+    static void studentMethod(){
+        Question obj=new Question();
+        obj.print();
+    }
+}
+class Question{
+   void print(){
+        System.out.println("Well Done!");
+    }
+}
+.....................................................................
+J8:Constructor
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    Solution(){
+        System.out.println("You got nothing.");
+    }
+    Solution(int l){
+        System.out.println("You got 10 for an MCQ");
+    }
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    Solution obj1=new Solution();
+     Solution obj2=new Solution(1);    
+     
+    }
+}
+.....................................................................
+J9:Variable printing
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    Scanner sc=new Scanner(System.in);
+        String str= new String();
+     //   str= sc.nextLine();
+    //  System.out.println(str);
+        System.out.println("OOPS WITH JAVA");
+    }
+}
+.....................................................................
+
+J10:Fibonacci Number
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+   Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        arr[0]=0;
+       if(n>1){
+        arr[1]=1;
+        for (int i=2;i<n;i++){
+            arr[i]=arr[i-1] + arr[i-2];
+         //System.out.print(arr[i]+" ");       
+        }}
+        System.out.print(arr[n-1]);
+    }
+}
+...................................................
+J11:Point class
+import java.io.*;
+import java.util.*;
+
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    
+        Scanner sc = new Scanner(System.in);
+        double x1 = sc.nextDouble();
+        double y1 = sc.nextDouble();
+        double x2 = sc.nextDouble();
+        double y2 = sc.nextDouble();
+        
+        double x = (x2-x1)*(x2-x1);
+        double y = (y2-y1)*(y2-y1);
+        Point t1=new Point();
+        double d=t1.distance(x,y);
+System.out.println(d);
+    }
+}
+class Point{
+    double x=0.0;
+     double y=0.0;
+    
+    double distance(double pointP1,double pointP2){
+      this.x=pointP1;
+      this.y=pointP2;
+    double distance = Math.sqrt((x + y));
+    return distance;
+    }
+}
+...........................................................................
+Simple Array Sum
+import java.util.*;
+class Solution{
+        public static void main(String [] args){
+            Scanner sc=new Scanner(System.in);
+            int length=sc.nextInt();
+            int[] arr=new int[length];
+            for (int i=0;i<length;i++){
+                arr[i]=sc.nextInt();
+            }
+            int sum=0;
+            for (int i=0;i<length;i++){
+                sum+=arr[i];
+            }
+            System.out.println(sum);
+        }
+}
+.........................................................................................
+Java Strings Introduction
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String B=sc.next();
+        /* Enter your code here. Print output to STDOUT. */
+     
+        System.out.println(A.length()+B.length());
+        
+        if(A.charAt(0) > B.charAt(0))
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+        
+        char a[]= new char[A.length()];
+        char b[]= new char[B.length()];
+        for (int i=0; i<a.length ;i++){        // coverting to arr
+            a[i]=A.charAt(i); 
+        }
+         for (int i=0; i<b.length; i++){        // coverting to arr
+            b[i]=B.charAt(i); 
+        }
+        a[0]=(char)((int)(a[0])-32);
+        b[0]=(char)((int)(b[0])-32);            //upper case
+        
+        for (int i=0; i<a.length; i++){        // display
+            System.out.print(a[i]+"");
+        } System.out.print(" ");
+        
+        for (int i=0; i<b.length; i++){        // display
+            System.out.print(b[i]+"");
+        } 
+    }
+}
+.......................................................................
+Java String Tokens
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        // Write your code here.
+
+             s = s.trim();
+        if (s.length() == 0) {
+            System.out.println(0);
+        } else {
+            String[] strings = s.split("['!?,._@ ]+");
+            System.out.println(strings.length);
+            for (String str : strings)
+                System.out.println(str);
+        }
+    }
+}
+....................................................................
+Java String Reverse
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        /* Enter your code here. Print output to STDOUT. */
+        
+        char a[]= new char[A.length()];
+        for (int i=0; i<A.length(); i++){        // coverting to arr
+            a[i]=A.charAt(i);
+        }
+        char b[]=new char[a.length];
+        for (int i=0, j=a.length-1; i<a.length; j--,i++){           //reverse arr
+            b[i]=a[j]; 
+        }  
+        
+        
+        if (Arrays.equals(a, b))  
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+    }
+}
+
+
+
+//undefine
+.....................................................................
+Java Substring
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String S = in.next();
+        int start = in.nextInt();
+        int end = in.nextInt();
+        
+        char arr[]= new char[S.length()];
+        for (int i=0; i<S.length(); i++){        // coverting to arr
+            arr[i]=S.charAt(i);    
+        }
+        for (int i=start; i<end; i++){        // display
+            System.out.print(arr[i]);    
+        }
+        
+    }
+}
+.................................................................................
+Java Substring Comparisons
+public static String getSmallestAndLargest(String s, int k) {
+        String smallest = "";
+        String largest = "";
+        
+        // Complete the function
+        // 'smallest' must be the lexicographically smallest substring of length 'k'
+        // 'largest' must be the lexicographically largest substring of length 'k'
+        
+        int l=s.length();
+        String arr[]=new String[l-(k-1)];
+        
+       // System.out.println(l);
+ 
+        for(int i=0;i<l-(k-1);i++){
+            for(int j=0; j<k;j++){
+            if (j==0)
+                arr[i]=""+s.charAt(i+j);
+            else
+                arr[i]=arr[i]+s.charAt(i+j);  
+            
+            }
+   //         arr[i]=""+s.charAt(i)+s.charAt(i+1)+s.charAt(i+2);
+        }
+       
+         java.util.Arrays.sort(arr);
+       
+        smallest = arr[0];
+        largest = arr[arr.length-1];
+        
+        return smallest + "\n" + largest;
+    }
+.........................................................................
+Java Anagrams
+  static boolean isAnagram(String a, String b) {
+        // Complete the function
+if(a.length()==b.length()){
+      
+      char A[]= new char[a.length()];
+        for (int i=0; i<a.length(); i++){        // coverting to arr
+            A[i]=a.charAt(i);
+            if(A[i]>='A' && A[i]<='Z')            //lower case
+                A[i]=(char)((int)(A[i])+32);
+        }        
+                
+      
+        char temp='a';                        //sort arr  
+        for (int i=0;i<A.length;i++){
+            for (int j=i+1;j<A.length;j++){
+                if(A[i]>=A[j]){
+                        temp=A[i];
+                        A[i] = A[j];
+                        A[j] = temp;
+                }        
+            }
+        }
+              
+        
+        char B[]= new char[b.length()];
+        for (int i=0; i<b.length(); i++){        // coverting to arr
+            B[i]=b.charAt(i);    
+         if(B[i]>='A' && B[i]<='Z')             //lower case
+            B[i]=(char)((int)(B[i])+32);
+         }
+      
+      
+      
+         temp='b';                        //sort arr  
+        for (int i=0;i<B.length;i++){
+            for (int j=i+1;j<B.length;j++){
+                if(B[i]>=B[j]){
+                        temp=B[i];
+                        B[i] = B[j];
+                        B[j] = temp;
+                }        
+            }
+        }
+      int count=0;
+      for(int i=0; i<A.length; i++){
+          if(A[i]==B[i])
+              count++;
+      }
+      
+      if (count==A.length)
+                return true;
+        else
+                 return false;
+}
+  else 
+      return false;    
+    }
+.......................................................................
+OOPJ1 :Girlfriend's demands
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        //while{}
+        Scanner sc=new Scanner(System.in);
+        int x=sc.nextInt();
+        int[] d=new int[x];
+        int[] c=new int[x];
+        for (int i=0;i<x;i++){
+            d[i]=sc.nextInt();
+            c[i]=sc.nextInt();
+        }
+        for(int i=0;i<x;i++){
+            if((c[i])%(d[i])==0)
+                System.out.println("Yes");
+            else
+                System.out.println("No");
+        }
+        
+    }
+}
+.............................................................................
+.........................................................................................
+=============================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
